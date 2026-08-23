@@ -1,0 +1,5 @@
+﻿*
+!Compiled_Release/
+!Compiled_Release/**
+!README.md
+!.gitignore
