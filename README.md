@@ -1,4 +1,4 @@
-# CS2 AutoMessageChat 📢
+# CS2 AutoMessageChat
 
 Uniwersalny plugin AutoMessageChat do Counter-Strike 2, zbudowany w oparciu o [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp).
 
@@ -19,7 +19,7 @@ Uniwersalny plugin AutoMessageChat do Counter-Strike 2, zbudowany w oparciu o [C
 
 1. Zainstaluj CounterStrikeSharp na swoim serwerze CS2.
 2. Skompiluj projekt za pomocą polecenia `dotnet build` (lub pobierz gotowy plik `.dll`).
-3. Przenieś plik `Cs2Plugin.dll` do folderu na serwerze: `addons/counterstrikesharp/plugins/AutoMessageChat/`.
+3. Przenieś plik `AutoMessageChat.dll` do folderu na serwerze: `addons/counterstrikesharp/plugins/AutoMessageChat/`.
 4. Zrestartuj serwer lub załaduj plugin ręcznie komendą `css_plugins load "AutoMessageChat"`.
 
 ## Konfiguracja
