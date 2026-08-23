@@ -30,7 +30,10 @@ Przykładowa konfiguracja:
 
 ```json
 {
-  "Prefix": "{Green}● {DarkRed}[{White}FG :: NAZWA SERWERA{DarkRed}]{Default}",
+  "Prefix": "{Green}● {DarkRed}[{White}FG :: INFO{DarkRed}]{Default}",
+  "WelcomeMessage": "{Green}Dołącz na Nasze Sociale wpisując {LightRed}!sociale{Default}",
+  "PlayerJoinMessage": "{LightBlue}{PLAYER} {White}właśnie dołączył na serwer!",
+  "PlayerDisconnectMessage": "{LightBlue}{PLAYER} {White}opuścił serwer.",
   "MessageIntervalSeconds": 120.0,
   "Messages": [
     "Zapraszamy do naszego sklepu pod komendą {Green}!sklep{Default}.",
@@ -42,6 +45,9 @@ Przykładowa konfiguracja:
 ```
 
 - **Prefix:** Tekst wyświetlany przed każdą wiadomością na czacie. Możesz używać standardowych tagów z kolorami (jak powyżej).
+- **WelcomeMessage:** Wiadomość powitalna wysyłana automatycznie do gracza (prywatna) po wejściu na serwer.
+- **PlayerJoinMessage:** Wiadomość wysyłana publicznie do wszystkich, gdy gracz wchodzi na serwer. Obsługuje zmienną `{PLAYER}`, która podmienia się na nick.
+- **PlayerDisconnectMessage:** Wiadomość wysyłana do wszystkich o wyjściu gracza z serwera (z obsługą `{PLAYER}`).
 - **MessageIntervalSeconds:** Czas (w sekundach) pomiędzy wysyłaniem kolejnych wiadomości na czat.
 - **Messages:** Lista wiadomości, które będą cyklicznie wyświetlane na serwerze (kolejno jedna po drugiej).
 
