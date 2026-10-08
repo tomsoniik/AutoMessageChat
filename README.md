@@ -1,6 +1,6 @@
 # AutoMessageChat
 
-Plugin do serwerów **Counter-Strike 2**, który automatycznie wysyła wiadomości na czat: cykliczne ogłoszenia, powitanie dla gracza oraz informację o wejściu i wyjściu z serwera. Działa na [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp).
+A **Counter-Strike 2** server plugin that posts chat messages automatically: rotating announcements, a welcome message for each player, and join and leave notices. Built on [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp).
 
 [![Release](https://img.shields.io/github/v/release/tomsoniik/AutoMessageChat?style=flat-square&color=3399FF)](https://github.com/tomsoniik/AutoMessageChat/releases/latest)
 ![CS2](https://img.shields.io/badge/game-CS2-3399FF?style=flat-square)
@@ -8,75 +8,75 @@ Plugin do serwerów **Counter-Strike 2**, który automatycznie wysyła wiadomoś
 
 <p align="center">
   <a href="https://github.com/tomsoniik/AutoMessageChat/releases/latest/download/AutoMessageChat.dll">
-    <img src="https://img.shields.io/badge/Pobierz-AutoMessageChat.dll-3399FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="Pobierz AutoMessageChat.dll" height="40" />
+    <img src="https://img.shields.io/badge/Download-AutoMessageChat.dll-3399FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="Download AutoMessageChat.dll" height="40" />
   </a>
 </p>
 
-## Funkcje
+## Features
 
-- Cykliczne wiadomości na czacie, wysyłane po kolei w ustalonym odstępie czasu
-- Prywatna wiadomość powitalna dla gracza po wejściu na serwer
-- Publiczna informacja o wejściu i wyjściu gracza (z jego nickiem)
-- Własny prefiks wiadomości, także w kolorach
-- Pełne wsparcie kolorów czatu CounterStrikeSharp, np. `{Green}`, `{Red}`, `{LightBlue}`
-- Plik konfiguracyjny tworzy się sam przy pierwszym uruchomieniu
+- Rotating chat messages, sent one after another at a set interval
+- Private welcome message for each player who joins
+- Public join and leave notices with the player's name
+- Custom message prefix, colors included
+- Full support for CounterStrikeSharp chat colors, e.g. `{Green}`, `{Red}`, `{LightBlue}`
+- Config file is created automatically on first start
 
-## Wymagania
+## Requirements
 
-- Serwer dedykowany Counter-Strike 2
+- Counter-Strike 2 dedicated server
 - [Metamod:Source](https://www.sourcemm.net/downloads.php/?branch=master) 2.x
-- [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp) 1.0.228 lub nowszy
+- [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp) 1.0.228 or newer
 
-## Instalacja
+## Installation
 
-1. Pobierz [`AutoMessageChat.dll`](https://github.com/tomsoniik/AutoMessageChat/releases/latest/download/AutoMessageChat.dll) (najnowsza wersja, wszystkie wydania są w [Releases](https://github.com/tomsoniik/AutoMessageChat/releases)).
-2. Wgraj plik na serwer do folderu:
+1. Download [`AutoMessageChat.dll`](https://github.com/tomsoniik/AutoMessageChat/releases/latest/download/AutoMessageChat.dll) (latest version; all versions are in [Releases](https://github.com/tomsoniik/AutoMessageChat/releases)).
+2. Upload it to this folder on your server:
    ```
    addons/counterstrikesharp/plugins/AutoMessageChat/
    ```
-3. Zrestartuj serwer albo załaduj plugin komendą:
+3. Restart the server or load the plugin with:
    ```
    css_plugins load "AutoMessageChat"
    ```
 
-## Konfiguracja
+## Configuration
 
-Przy pierwszym uruchomieniu plugin tworzy plik:
+On first start the plugin creates:
 
 ```
 addons/counterstrikesharp/configs/plugins/AutoMessageChat/AutoMessageChat.json
 ```
 
-Przykład:
+Example:
 
 ```json
 {
   "Prefix": "{Green}● {DarkRed}[{White}FG :: INFO{DarkRed}]{Default}",
-  "WelcomeMessage": "{Green}Dołącz na nasze sociale wpisując {LightRed}!sociale{Default}",
-  "PlayerJoinMessage": "{LightBlue}{PLAYER} {White}właśnie dołączył na serwer!",
-  "PlayerDisconnectMessage": "{LightBlue}{PLAYER} {White}opuścił serwer.",
+  "WelcomeMessage": "{Green}Follow us on social media, type {LightRed}!socials{Default}",
+  "PlayerJoinMessage": "{LightBlue}{PLAYER} {White}just joined the server!",
+  "PlayerDisconnectMessage": "{LightBlue}{PLAYER} {White}left the server.",
   "MessageIntervalSeconds": 120.0,
   "Messages": [
-    "Zapraszamy do naszego sklepu pod komendą {Green}!sklep{Default}.",
-    "Trwa {Red}rekrutacja na admina{Default}! Złóż podanie na naszym forum.",
-    "Pamiętaj o zachowaniu {LightBlue}kultury{Default} na serwerze."
+    "Check out our shop with {Green}!shop{Default}.",
+    "{Red}Admin recruitment{Default} is open! Apply on our forum.",
+    "Please keep it {LightBlue}friendly{Default} on the server."
   ],
   "ConfigVersion": 1
 }
 ```
 
-| Pole | Opis |
+| Option | Description |
 | :--- | :--- |
-| `Prefix` | Tekst wyświetlany przed każdą wiadomością. Może zawierać kolory. |
-| `WelcomeMessage` | Prywatna wiadomość dla gracza po wejściu na serwer. |
-| `PlayerJoinMessage` | Publiczna wiadomość o wejściu gracza. `{PLAYER}` zamienia się na jego nick. |
-| `PlayerDisconnectMessage` | Publiczna wiadomość o wyjściu gracza. Obsługuje `{PLAYER}`. |
-| `MessageIntervalSeconds` | Odstęp w sekundach między kolejnymi wiadomościami z listy `Messages`. |
-| `Messages` | Lista wiadomości wyświetlanych po kolei, w kółko. |
+| `Prefix` | Text shown before every message. Can include colors. |
+| `WelcomeMessage` | Private message sent to a player after they join. |
+| `PlayerJoinMessage` | Public message when a player joins. `{PLAYER}` is replaced with their name. |
+| `PlayerDisconnectMessage` | Public message when a player leaves. Supports `{PLAYER}`. |
+| `MessageIntervalSeconds` | Seconds between messages from the `Messages` list. |
+| `Messages` | Messages shown one after another, on a loop. |
 
-Po zmianie konfiguracji przeładuj plugin albo zrestartuj serwer.
+After changing the config, reload the plugin or restart the server.
 
-## Autor
+## Author
 
-**tomSoNN** ([tomsoniik](https://github.com/tomsoniik)), twórca [FragHub](https://hub.fragujemy.com).
-Pytania i błędy zgłaszaj w [Issues](https://github.com/tomsoniik/AutoMessageChat/issues) albo na Discordzie: `tomsoncs`.
+**tomSoNN** ([tomsoniik](https://github.com/tomsoniik)), creator of [FragHub](https://hub.fragujemy.com).
+Questions and bug reports: [Issues](https://github.com/tomsoniik/AutoMessageChat/issues) or Discord `tomsoncs`.
