@@ -6,6 +6,8 @@ Plugin do serwerów **Counter-Strike 2**, który automatycznie wysyła wiadomoś
 ![CS2](https://img.shields.io/badge/game-CS2-3399FF?style=flat-square)
 ![CounterStrikeSharp](https://img.shields.io/badge/CounterStrikeSharp-1.0.228%2B-3399FF?style=flat-square)
 
+**[⬇ Pobierz AutoMessageChat.dll](https://github.com/tomsoniik/AutoMessageChat/releases/latest/download/AutoMessageChat.dll)**
+
 ## Funkcje
 
 - Cykliczne wiadomości na czacie, wysyłane po kolei w ustalonym odstępie czasu
@@ -23,7 +25,7 @@ Plugin do serwerów **Counter-Strike 2**, który automatycznie wysyła wiadomoś
 
 ## Instalacja
 
-1. Pobierz `AutoMessageChat.dll` z [najnowszego wydania](https://github.com/tomsoniik/AutoMessageChat/releases/latest).
+1. Pobierz [`AutoMessageChat.dll`](https://github.com/tomsoniik/AutoMessageChat/releases/latest/download/AutoMessageChat.dll) (najnowsza wersja, wszystkie wydania są w [Releases](https://github.com/tomsoniik/AutoMessageChat/releases)).
 2. Wgraj plik na serwer do folderu:
    ```
    addons/counterstrikesharp/plugins/AutoMessageChat/
