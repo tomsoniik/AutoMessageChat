@@ -78,5 +78,5 @@ After changing the config, reload the plugin or restart the server.
 
 ## Author
 
-**tomSoNN** ([tomsoniik](https://github.com/tomsoniik)), creator of [FragHub](https://hub.fragujemy.com).
+**tomSoNN** ([tomsoniik](https://github.com/tomsoniik)), co-creator of [FragHub](https://hub.fragujemy.com).
 Questions and bug reports: [Issues](https://github.com/tomsoniik/AutoMessageChat/issues) or Discord `tomsoncs`.
