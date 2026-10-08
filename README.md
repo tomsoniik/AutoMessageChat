@@ -6,7 +6,11 @@ Plugin do serwerów **Counter-Strike 2**, który automatycznie wysyła wiadomoś
 ![CS2](https://img.shields.io/badge/game-CS2-3399FF?style=flat-square)
 ![CounterStrikeSharp](https://img.shields.io/badge/CounterStrikeSharp-1.0.228%2B-3399FF?style=flat-square)
 
-**[⬇ Pobierz AutoMessageChat.dll](https://github.com/tomsoniik/AutoMessageChat/releases/latest/download/AutoMessageChat.dll)**
+<p align="center">
+  <a href="https://github.com/tomsoniik/AutoMessageChat/releases/latest/download/AutoMessageChat.dll">
+    <img src="https://img.shields.io/badge/Pobierz-AutoMessageChat.dll-3399FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="Pobierz AutoMessageChat.dll" height="40" />
+  </a>
+</p>
 
 ## Funkcje
 
